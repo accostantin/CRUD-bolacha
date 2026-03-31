@@ -1,22 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolacha</title> <link rel="stylesheet" href="style.css">
+    <title>Lista de Bolacha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="elementos"> <h1 class="title">Tabela Bolachas</h1> </div>
-    </header>
-    <main>
-        <div class="main_container"> 
-          <div class="table">
-            <h2 class="table_title"> Lista de Bolachas:</h2>
-            
-          </div>  
-    </div>
-    </main>
+
+<h1>Lista de Bolacha</h1>
+
+<h2>Base</h2>
+<form>
+    <input type="text" placeholder="BaseID">
+    <input type="text" placeholder="Nome">
+    <input type="text" placeholder="Cor">
+    <button class="btn-adicionar">Adicionar</button>
+    <button class="btn-editar">Editar</button>
+    <button class="btn-excluir">Excluir</button>
+
+
+</form>
+
+<table>                         
+    <tr>
+        <th>BaseID</th>
+        <th>Nome</th>
+        <th>Cor</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Chocolate</td>
+        <td>Marrom</td>
+    </tr>
+</table>
+
+
+<h2>Recheio</h2>
+<form>
+    <input type="text" placeholder="RecheioID">
+    <input type="text" placeholder="Nome">
+    <input type="text" placeholder="Cor">
+    <button class="btn-adicionar">Adicionar</button>
+    <button class="btn-editar">Editar</button>
+    <button class="btn-excluir">Excluir</button>
+</form>
+
+<table>
+    <tr>
+        <th>RecheioID</th>
+        <th>Nome</th>
+        <th>Cor</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Baunilha</td>
+        <td>Branco</td>
+    </tr>
+</table>
+
+
+<h2>Bolacha</h2>
+<form>
+    <input type="text" placeholder="BolachaID">
+    <input type="text" placeholder="RecheioID">
+    <input type="text" placeholder="BaseID">
+    <input type="text" placeholder="Nome">
+    <input type="text" placeholder="Marca">
+    <button class="btn-adicionar">Adicionar</button>
+    <button class="btn-editar">Editar</button>
+    <button class="btn-excluir">Excluir</button>
+</form>
+
+<table>
+    <tr>
+        <th>BolachaID</th>
+        <th>RecheioID</th>
+        <th>BaseID</th>
+        <th>Nome</th>
+        <th>Marca</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>Recheada</td>
+        <td>Marca X</td>
+    </tr>
+</table>
 
 </body>
 </html>
