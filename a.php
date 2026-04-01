@@ -5,6 +5,11 @@
     <title>Lista de Bolacha</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<?php
+include_once './include/conexao.php';
+
+
+?>
 <body>
 
 <h1>Lista de Bolacha</h1>
@@ -14,7 +19,6 @@
     <input type="text" placeholder="BaseID">
     <input type="text" placeholder="Nome">
     <input type="text" placeholder="Cor">
-    <button class="btn-adicionar">Adicionar</button>
     <button class="btn-editar">Editar</button>
     <button class="btn-excluir">Excluir</button>
 
@@ -40,7 +44,6 @@
     <input type="text" placeholder="RecheioID">
     <input type="text" placeholder="Nome">
     <input type="text" placeholder="Cor">
-    <button class="btn-adicionar">Adicionar</button>
     <button class="btn-editar">Editar</button>
     <button class="btn-excluir">Excluir</button>
 </form>
@@ -59,6 +62,7 @@
 </table>
 
 
+
 <h2>Bolacha</h2>
 <form>
     <input type="text" placeholder="BolachaID">
@@ -66,7 +70,6 @@
     <input type="text" placeholder="BaseID">
     <input type="text" placeholder="Nome">
     <input type="text" placeholder="Marca">
-    <button class="btn-adicionar">Adicionar</button>
     <button class="btn-editar">Editar</button>
     <button class="btn-excluir">Excluir</button>
 </form>

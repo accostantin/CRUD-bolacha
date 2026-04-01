@@ -2,17 +2,18 @@
 
 body {
     font-family:"Sour Gummy", sans-serif;
-    background: #ffffff;
+    background: #ffefbb;
     padding: 20px;
+    
 }
 
 h1{
-    color: #ffd500;
+    color: #ff9900;
     text-shadow: 2px 2px 1px #ff7300;
 }
 
 h2{
-    color: #000000;
+    color: #ff9900;
 }
 
 form {
@@ -34,13 +35,19 @@ input {
     background: rgb(128, 0, 0);
     color: white;
     border-radius: 5px;
+    border: none;
+    box-shadow: rgb(55, 0, 0) 2px 2px;
+
 }
 
 .btn-editar{
     padding: 5px 10px;
-    background: rgb(255, 252, 50);
+    background: #ff9900;
     color: white;
     border-radius: 5px;
+    border: none;
+    box-shadow: rgb(55, 0, 0) 2px 2px;
+
 
 }
 
@@ -49,7 +56,11 @@ input {
     background: green;
     color: white;
     border-radius: 5px;
+    border: none;
+    box-shadow: rgb(55, 0, 0) 2px 2px;
+
 }
+
 
 table {
     width: 100%;
