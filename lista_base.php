@@ -28,8 +28,8 @@ include_once './include/header.php';
                   echo "<td>" . $row['Nome'] . "</td>";
                   echo "<td>" . $row['Cor'] . "</td>";
                   echo "<td>
-                          <a href='salvar-base.php?id=". $row['BaseID']. "' class='btn-editar'>Editar</a>
-                          <a href='#' class=' btn-excluir'>Excluir</a>
+                          <a href='salvar_base.php?id=". $row['BaseID']. "' class='btn-editar'>Editar</a>
+                          <a href='./act/base.php?id=" . $row['BaseID'] . "&acao=excluir' class=' btn-excluir'>Excluir</a>
                         </td>";
                   echo "</tr>";
               }

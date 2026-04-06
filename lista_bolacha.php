@@ -34,8 +34,8 @@ include_once './include/header.php';
                   echo "<td>" . $row['NomeBase'] . "</td>";
                   echo "<td>" . $row['Marca'] . "</td>";
                   echo "<td>
-                          <a href='salvar-bolacha.php?id=". $row['BolachaID']. "' class='btn-editar'>Editar</a>
-                          <a href='#' class=' btn-excluir'>Excluir</a>
+                          <a href='salvar_bolacha.php?id=". $row['BolachaID']. "' class='btn-editar'>Editar</a>
+                          <a href='./act/bolacha.php?id=" . $row['BolachaID'] . "&acao=excluir'class=' btn-excluir'>Excluir</a>
                         </td>";
                   echo "</tr>";
               }

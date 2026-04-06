@@ -28,9 +28,9 @@ include_once './include/header.php';
                   echo "<td>" . $row['Nome'] . "</td>";
                   echo "<td>" . $row['Sabor'] . "</td>";
                   echo "<td>
-                          <a href='salvar-recheio.php?id=". $row['RecheioID']. "' class='btn-editar'>Editar</a>
-                          <a href='#' class=' btn-excluir'>Excluir</a>
-                        </td>";
+        <a href='salvar_recheio.php?id=" . $row['RecheioID'] . "' class='btn-editar'>Editar</a>
+        <a href='./act/recheio.php?id=" . $row['RecheioID'] . "&acao=excluir' class='btn-excluir'>Excluir</a>
+      </td>";
                   echo "</tr>";
               }
           }

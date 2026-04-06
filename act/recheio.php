@@ -1,46 +1,44 @@
 <?php
 include_once '../include/conexao.php';
 
-// captura a acao dos dados
+// captura a acao e o id
 $acao = $_REQUEST['acao'] ?? '';
 $id = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : 0;
 
 switch ($acao) {
     case 'excluir':
-        // Verificar se o setor está sendo referenciado em outra tabela
-        $checkSql = 'SELECT COUNT(*) AS total FROM funcionarios WHERE SetorID = '.$id;
-        $checkResult = mysqli_query($conexao, $checkSql);
-        $checkRow = mysqli_fetch_assoc($checkResult);
-
-        if ($checkRow['total'] > 0) {
-            // Exibir alerta de erro via JavaScript
-            echo "<script>
-                    alert('O setor não pode ser excluído porque está sendo utilizado em outra tabela.');
-                    window.location.href = '../lista-setores.php';
-                  </script>";
-        } else {
-            // Excluir o setor
-            $sql = 'DELETE FROM setor WHERE SetorID = '.$id;
+        if ($id > 0) {
+            $sql = "DELETE FROM recheios WHERE RecheioID = $id";
             mysqli_query($conexao, $sql);
-            header("Location: ../lista-setores.php?sucesso=setor_excluido");
         }
+        header("Location: ../lista_recheio.php");
         break;
 
     case 'salvar':
         $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
         $sabor = mysqli_real_escape_string($conexao, $_POST['sabor']);
 
-        
-        $sql = "INSERT INTO recheios (Nome, Sabor) VALUES ('$nome', '$sabor')";
+        // --- LÓGICA DE ATUALIZAÇÃO OU CADASTRO ---
+        if ($id > 0) {
+            // Se o ID for maior que zero, ele ATUALIZA o registro existente
+            $sql = "UPDATE recheios SET 
+                    Nome = '$nome', 
+                    Sabor = '$sabor' 
+                    WHERE RecheioID = $id";
+        } else {
+            // Se o ID for 0, ele CRIA um novo registro
+            $sql = "INSERT INTO recheios (Nome, Sabor) VALUES ('$nome', '$sabor')";
+        }
 
         if (!mysqli_query($conexao, $sql)) {
-            die("Erro ao salvar o setor: " . mysqli_error($conexao));
+            die("Erro ao processar o recheio: " . mysqli_error($conexao));
         }
 
         header("Location: ../lista_recheio.php");
         break;
 
     default:
+        header("Location: ../lista_recheio.php");
         break;
 }
 ?>
